@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Issue</title>
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/issue.css">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="main-header_nav">
+            <ul class="main-header_item-list">
+                <li class="main-header_item">
+                    <a href="/">Home</a>
+                </li>
+                <li class="main-header_item">
+                    <a  class="active" href="/user/add-issue">Create issue</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="form_container">
+            <form class="issue-form" action="/user/add-issue" method="post">
+                <div class="form-control">
+                    <label for="issue-picture">Picture</label>
+                    <input type="text" name="issue-picture" id="issue-picture">
+                </div>
+                <button type="submit">Add Issue</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

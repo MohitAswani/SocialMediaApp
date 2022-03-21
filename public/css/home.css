@@ -1,0 +1,117 @@
+:root{
+    /*Here we are declaring a variable color-dark to which we assign hsl which is Hue saturation and lightness */
+    --color-white:hsl(252,30%,100%); 
+    --color-light:hsl(252,30%,95%); 
+    --color-gray:hsl(252,15%,65%); 
+    --color-primary:hsl(252,75%,60%); 
+    --color-secondary:hsl(252,100%,90%); 
+    --color-success:hsl(120,95%,65%); 
+    --color-danger:hsl(0,95%,65%); 
+    --color-dark:hsl(252,30%,17%); 
+    --color-black:hsl(252,30%,10%); 
+
+    --border-radius:2rem;
+    --card-border-radius:1rem;
+    --btn-padding:0.6rem 1rem;
+    --search-padding:0.6rem 1rem;
+    --card-padding:1rem;
+
+    --sticky-top-left: 5.4rem;
+    --sticky-top-right: -18rem;
+}
+
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+}
+body{
+    background: var(--color-light);
+}
+.main-header{
+    width: 100%;
+    height: 3.5rem;
+    background-color:var(--color-primary);
+    padding: 0 1.5rem;
+    position: fixed;
+    top: 0;
+}
+.main-header_nav{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.main-header_item-list{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.main-header_item{
+    margin: 0 1rem;
+    padding: 0;
+}
+.main-header_item a{
+    font-size: larger;
+    font-weight: 400;
+    text-decoration: none;
+    color:grey;
+}
+.main-header_item a:hover,
+.main-header_item a:active,
+.main-header_item a.active{
+    color:white;
+}
+
+main{
+    width: 80%;
+    margin: 0 auto;
+}
+.profile-photo{
+    width:2.7rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px var(--color-primary) solid;
+}
+img{
+    display: block;
+    width:100%;
+}
+.issues{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.issues .issue{
+    display: block;
+    width: 40rem;
+    max-width: 1000px;
+    background: var(--color-white);
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    margin: 1rem 1rem;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    box-shadow: 20px;
+}
+
+.issues .issue .head{
+    display: flex;
+    justify-content: space-between;
+}
+.issues .issue .user{
+    display: flex;
+    gap:1rem;
+}
+.issues .issue .photo{
+    border-radius: var(--card-border-radius);
+    overflow: hidden;
+    margin: 0.7rem 0;
+}
