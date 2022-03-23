@@ -1,0 +1,38 @@
+<%- include('includes/head.ejs') %>
+</head>
+
+    <body>
+        <%- include('includes/nav_bar.ejs') %>
+
+            <main>
+                <% if(issues.length>0) {%>
+                    <div class="issues">
+                        <% issues.forEach(issue=>{ %>
+                            <div class="issue">
+                                <div class="head">
+                                    <div class="user">
+                                        <div class="profile-photo">
+                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUepR26h_UuwBcdsBM8f5bMQOL_ByC2l_Ocw&usqp=CAU">
+                                        </div>
+                                        <div class="info">
+                                            <h3>Username</h3>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="photo">
+                                    <img
+                                        src="<%= issue.issue_picture %>">
+                                </div>
+
+                            </div>
+                        <% }) %>
+                    </div>
+                    <% } else { %>
+                        <h1>Issues</h1>
+                        <p>List of all the issues</p>
+                    <% } %>
+            </main>
+
+
+    <%- include('includes/end.ejs') %>

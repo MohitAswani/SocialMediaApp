@@ -1,0 +1,21 @@
+<%- include('includes/head.ejs') %>
+<link rel="stylesheet" href="/css/issue.css">
+</head>
+
+<body>
+    <%- include('includes/nav_bar.ejs') %> 
+
+    <main>
+        <div class="form_container">
+            <form class="issue-form" action="/user/add-issue" method="post">
+                <div class="form-control">
+                    <label for="issue-picture">Picture</label>
+                    <input type="text" name="issue_picture" id="issue_picture">
+                </div>
+                <button type="submit">Add Issue</button>
+            </form>
+        </div>
+    </main>
+
+
+    <%- include('includes/end.ejs') %>
